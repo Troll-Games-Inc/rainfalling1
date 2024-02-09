@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snow Falling</title>
+    <title>Rain 💧</title>
     <style>
         body {
             background-color: black;
@@ -13,14 +13,14 @@
             margin: 0;
         }
         
-        .snowflake {
+        .rain {
             position: absolute;
             color: white;
             font-size: 20px;
             animation: snowfall linear infinite;
         }
         
-        @keyframes snowfall {
+        @keyframes rainfall {
             0% {
                 transform: translateY(-10vh);
             }
@@ -33,21 +33,21 @@
 
 <body>
     <script>
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.innerHTML = '❄';
-            snowflake.classList.add('snowflake');
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Randomize animation duration
-            snowflake.style.opacity = Math.random(); // Randomize opacity
-            document.body.appendChild(snowflake);
+        function createRain() {
+            const rain = document.createElement('div');
+            rain.innerHTML = '💧';
+            rain.classList.add('rain');
+            rain.style.left = Math.random() * window.innerWidth + 'px';
+            rain.style.animationDuration = Math.random() * 3 + 2 + 's'; // Randomize animation duration
+            rain.style.opacity = Math.random(); // Randomize opacity
+            document.body.appendChild(rain);
 
             setTimeout(() => {
-                snowflake.remove();
+                rain.remove();
             }, 10000); // Remove after 10 seconds
         }
 
-        setInterval(createSnowflake, 100); // Create new snowflake every 100ms
+        setInterval(createRain, 100); // Create new Raindrop every 100ms
     </script>
 </body>
 
